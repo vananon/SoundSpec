@@ -111,10 +111,13 @@ class Verificador(SoundSpecParserListener):
 
 def main():
     if len(sys.argv) < 2:
-        print("Uso: python main.py <archivo.snd>")
-        return
-
-    archivo = sys.argv[1]
+        print("No pasaste un archivo como argumento.")
+        archivo = input("Ingresa la ruta del archivo .snd (ej. ejemplos/ejemplo_valido.snd): ").strip()
+        if not archivo:
+            print("No se ingresó ningún archivo. Saliendo...")
+            return
+    else:
+        archivo = sys.argv[1]
     try:
         with open(archivo, 'r', encoding='utf-8') as f:
             cod_fuente = f.read()

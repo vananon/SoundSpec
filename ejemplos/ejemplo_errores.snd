@@ -1,0 +1,5 @@
+track Pista1 {
+    notes: [ C4: 1/4 ];
+} track Pista1 { notes: [ C0: 1/0 ]; }
+effect Efecto1 { delay: 100ms; }
+mix Mezcla = Efecto1 -> NoDeclarado;

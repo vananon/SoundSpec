@@ -1,0 +1,10 @@
+track PistaValida {
+    bpm: 120;
+    wave: SINE;
+    notes: [ C4: 1/2, E4: 1/4, G4: 1/4 ];
+}
+effect Reverb {
+    delay: 200ms;
+    decay: 0.5;
+}
+mix MiMezcla = PistaValida -> Reverb;

@@ -3,3 +3,8 @@ __pycache__/
 *.jar
 *.interp
 *.tokens
+*.pyc
+.pytest_cache/
+antlr-*-complete.jar
+estrellita_arbol.txt
+.DS_Store

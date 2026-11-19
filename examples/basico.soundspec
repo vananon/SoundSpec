@@ -1,0 +1,7 @@
+track BassLine {
+  bpm: 120;
+  wave: SAWTOOTH;
+  notes: [C2:1/4, E2:1/4, G2:1/2];
+}
+effect Reverb1 { delay: 200ms; decay: 0.5; }
+mix Song = BassLine -> Reverb1;

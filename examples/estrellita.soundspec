@@ -1,0 +1,75 @@
+// CANCION: Estrellita, donde estas?
+// MELODIA: Twinkle, Twinkle, Little Star
+// Tonalidad: Do mayor
+
+track MelodiaEstrellita {
+bpm: 100;
+wave: SINE;
+notes: [
+// Frase 1: Do Do Sol Sol La La Sol
+C4:1/4,
+C4:1/4,
+G4:1/4,
+G4:1/4,
+A4:1/4,
+A4:1/4,
+G4:1/2,
+
+// Frase 2: Fa Fa Mi Mi Re Re Do
+F4:1/4,
+F4:1/4,
+E4:1/4,
+E4:1/4,
+D4:1/4,
+D4:1/4,
+C4:1/2,
+
+// Frase 3: Sol Sol Fa Fa Mi Mi Re
+G4:1/4,
+G4:1/4,
+F4:1/4,
+F4:1/4,
+E4:1/4,
+E4:1/4,
+D4:1/2,
+
+// Frase 4: Repeticion de la frase anterior
+G4:1/4,
+G4:1/4,
+F4:1/4,
+F4:1/4,
+E4:1/4,
+E4:1/4,
+D4:1/2,
+
+// Frase 5: Regreso a la melodia inicial
+C4:1/4,
+C4:1/4,
+G4:1/4,
+G4:1/4,
+A4:1/4,
+A4:1/4,
+G4:1/2,
+
+// Frase 6: Cierre de la cancion
+F4:1/4,
+F4:1/4,
+E4:1/4,
+E4:1/4,
+D4:1/4,
+D4:1/4,
+C4:1/2
+];
+}
+
+// Efecto de eco suave.
+effect EcoSuave {
+delay: 180ms;
+decay: 0.25;
+}
+
+// Version sin efectos.
+mix EstrellitaOriginal = MelodiaEstrellita;
+
+// Version con eco.
+mix EstrellitaConEco = MelodiaEstrellita -> EcoSuave;

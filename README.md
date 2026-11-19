@@ -62,3 +62,13 @@ Errores encontrados:
 [SEM-05] línea 5: 'Efecto1' fue declarado como effect, pero la fuente de un mix debe ser un track.
 [SEM-02] línea 5: el efecto 'NoDeclarado' no ha sido declarado.
 ```
+
+## Paquete `soundspec` (frontend modular)
+
+Además de `main.py`, el repositorio incluye el compilador como paquete Python (`soundspec/`) con fases léxica, sintáctica y semántica (SEM-01 a SEM-06), un plan de validación en `tests/` y ejemplos en `examples/`.
+
+```bash
+./scripts/generar_parser.sh          # genera soundspec/generated/ (requiere Java 11+)
+python -m soundspec examples/estrellita.soundspec
+pytest -v
+```
